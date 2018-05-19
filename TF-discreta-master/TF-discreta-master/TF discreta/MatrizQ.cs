@@ -16,7 +16,7 @@ namespace TF_discreta
     {
         private int num;
         private int[][] matrix;
-        private int nhab = 0;
+        private int nhab;
         private int ai = 0;
         private int[] arr;
         public MatrizQ(int nu)
@@ -51,7 +51,7 @@ namespace TF_discreta
         public int getP(int i, int j) { return matrix[i][j]; }
         public int[][] returnMa() { return matrix; }
         public void setP(int i, int j, int value) //simetrica
-        { 
+        {
             matrix[i][j] = value;
             matrix[j][i] = value;
         }
@@ -69,6 +69,7 @@ namespace TF_discreta
         public void setMat(int[][] mat) { matrix = mat; }
         public void Calc()
         {
+            nhab = 0;
             while (true)
             {
 
@@ -78,7 +79,7 @@ namespace TF_discreta
                     if (getP(aj, ai) == 1)
                     {
 
-                        var add = true;
+                        bool add = true;
 
                         for (int i = 0; i < num; i++)
                         {
@@ -112,24 +113,24 @@ namespace TF_discreta
         }
         public void Ordenar()
         {
-           // int aux2;
-           // for (int i = 0; i < num; i++)
-           // {
-           //     for (int j = 0; j < num; j++)
-           //     {
-           //         if (arr[i] < arr[j])
-           //         {
-           //             aux2 = arr[i];
-           //             arr[i] = arr[j];
-           //             arr[j] = aux2;
-           //         }
-           //     }
-           //
-           // }
+            // int aux2;
+            // for (int i = 0; i < num; i++)
+            // {
+            //     for (int j = 0; j < num; j++)
+            //     {
+            //         if (arr[i] < arr[j])
+            //         {
+            //             aux2 = arr[i];
+            //             arr[i] = arr[j];
+            //             arr[j] = aux2;
+            //         }
+            //     }
+            //
+            // }
         }
-        //public int getHab() { return nhab; }
-        //public int[] getArr() { return arr; }
-        public int getPos(int i) { return arr[i]+1; }
+        public int getHab() { return nhab; }
+        public int[] getArr() { return arr; }
+        public int getPos(int i) { return arr[i] + 1; }
     }
 
 }

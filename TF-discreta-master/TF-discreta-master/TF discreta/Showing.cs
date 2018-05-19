@@ -109,30 +109,53 @@ namespace TF_discreta
                 else
                 {
 
-                    EnumText     . Visibility = ViewStates.Gone;
-                    CantText     . Visibility = ViewStates.Gone;
-                    ButtonBack   . Visibility = ViewStates.Gone;
+                    EnumText.Visibility = ViewStates.Gone;
+                    CantText.Visibility = ViewStates.Gone;
+                    ButtonBack.Visibility = ViewStates.Gone;
                     container.Visibility = ViewStates.Gone;
                     if (numcant >= 2)
                     {
                         this.Title = "ELEMENTOS AGRUPADOS";
+
                         ma.setMat(mat);
                         ma.Calc();
-                        ma.Ordenar();
+                        int[] arr = ma.getArr();
+                        //ma.Ordenar();
+                        int aux2;
+                        string aux3;
+                        for (int i = 0; i < numcant; i++)
+                        {
+                            for (int j = 0; j < numcant; j++)
+                            {
+                                if (arr[i] < arr[j])
+                                {
+                                    aux2 = arr[i];
+                                    arr[i] = arr[j];
+                                    arr[j] = aux2;
+                                    aux3 = myTextViews[i];
+                                    myTextViews[i] = myTextViews[j];
+                                    myTextViews[j] = aux3;
+                                }
+                            }
+
+                        }
                         EnumText.Visibility = ViewStates.Visible;
                         EnumText.Text = String.Empty;
 
-                        for (int i = 0; i < numcant; i++)
+                        for (int i = 0; i < ma.getHab(); i++)
                         {
-                            EnumText.Text = EnumText.Text + myTextViews[i] + ": " + ma.getPos(i) + " ";
-                            if (i + 1 < numcant)
+                            int aux4 = i + 1;
+                            EnumText.Text = EnumText.Text + "Los quimicos en el cuarto " + aux4 + ": \n";
+                            for (int j = 0; j < numcant; j++)
                             {
-                                if (ma.getPos(i) != ma.getPos(i+1))
+                                if (arr[j] == i)
                                 {
-                                    EnumText.Text = EnumText.Text + "\n";
+                                    EnumText.Text = EnumText.Text + myTextViews[j] + "\n";
                                 }
                             }
                         }
+
+
                     }
                 }
             };
