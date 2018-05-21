@@ -15,12 +15,17 @@ namespace TF_discreta
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
             var but = FindViewById<Button>(Resource.Id.button1);
+
+            var but2 = FindViewById<Button>(Resource.Id.creditos);
             but.Click += (s,e) => 
             {
               Intent nextActivity = new Intent(this, typeof(Adding)); //CHANGE
               StartActivity(nextActivity);                
             };
-
+            but2.Click += (s, e) =>
+            {
+                SetContentView(Resource.Layout.creditos);
+            };
 
         }
     }

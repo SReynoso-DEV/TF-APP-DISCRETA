@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+        android:background="@android:color/holo_blue_light"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Curso:                                                         Matemática Discreta  MA265"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="25sp"
+        android:layout_gravity="top"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:text="Sección:                                              SW31"
+        android:layout_width="match_parent"
+        android:layout_height="88.5dp"
+        android:id="@+id/textView1"
+        android:textSize="25sp"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:text="Profesor:                                              Marcos Medina"
+        android:layout_width="match_parent"
+        android:layout_height="150.5dp"
+        android:id="@+id/textView1"
+        android:textSize="25sp"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:text="Integrantes:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="25sp"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:text="Sebastian Reynoso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="25sp"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:text="Luis Vilca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="25sp"
+        android:gravity="center_horizontal" />
+</LinearLayout>

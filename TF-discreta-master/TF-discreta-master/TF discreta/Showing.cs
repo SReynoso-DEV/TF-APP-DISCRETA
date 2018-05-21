@@ -145,7 +145,7 @@ namespace TF_discreta
                         for (int i = 0; i < ma.getHab(); i++)
                         {
                             int aux4 = i + 1;
-                            EnumText.Text = EnumText.Text + "Los quimicos en el cuarto " + aux4 + ": \n";
+                            EnumText.Text = EnumText.Text + "Los químicos en el cuarto " + aux4 + ": \n";
                             for (int j = 0; j < numcant; j++)
                             {
                                 if (arr[j] == i)

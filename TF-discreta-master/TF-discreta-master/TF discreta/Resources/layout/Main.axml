@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_light"
     android:id="@+id/linearLayout1">
     <TextView
         android:text="¡Bienvenido al sistema de agrupación de elementos químicos!"
@@ -17,5 +18,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:textColor="@android:color/background_light" />
+    <Button
+        android:text="Creditos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/creditos"
+        android:textSize="15sp"
+        android:textColor="@android:color/background_light" />
 </LinearLayout>
