@@ -76,39 +76,39 @@ namespace TF_discreta
                 for (int aj = ai; aj < num; aj++)
                 {
 
-                    if (getP(aj, ai) == 1)
+                    if (getP(aj, ai) == 1)//obtiene los 1s de cada j
                     {
 
-                        bool add = true;
+                        bool add = true;//verdadero el hecho que se deba agregar a un cuarto
 
-                        for (int i = 0; i < num; i++)
+                        for (int i = 0; i < num; i++)//Verifica en tod el arreglo 
                         {
 
-                            if (arr[i] == nhab && getP(aj, i) == 0)
+                            if (arr[i] == nhab && getP(aj, i) == 0)//si el quimico ya tiene habitacion o si no es compatible es falso
                                 add = false;
                         }
 
-                        if (add && arr[aj] == -1)
-                            arr[aj] = nhab;
+                        if (add && arr[aj] == -1)//si pasa era verificacion y el quimico no tiene una habitacion
+                            arr[aj] = nhab;//asigna un numero de habitacion
                     }
                 }
 
                 nhab++;
                 bool stop = true;
-                for (int i = 0; i < num; i++)
+                for (int i = 0; i < num; i++)//Se verfica cual es el quimico que falta una habitacion
                 {
 
                     if (arr[i] == -1)
                     {
-                        ai = i;
-                        i = num;
-                        stop = false;
+                        ai = i;//se asigna ai al nuevo indice
+                        i = num;// y i = a num para que termine la busqueda
+                        stop = false;//entonces aun no para
                     }
                 }
-                if (stop)
-                {
-                    break;
-                }
+               if (stop)
+               {
+                   break;
+               }
             }
         }
         public void Ordenar()
