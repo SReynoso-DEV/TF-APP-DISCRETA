@@ -18,7 +18,6 @@ namespace TF_discreta
     public class Showing : Activity
     {
         
-        int title;
         MatrizQ ma; //matriz                  
         int numcant;
         int Nelem = 0;
@@ -65,6 +64,7 @@ namespace TF_discreta
                     myTextViews2[j] = nombreE;
                     myAddViews[j] = addView2;
                     container.AddView(addView2);
+                    
                     compE.CheckedChange += delegate{};
                 }
 
@@ -141,15 +141,22 @@ namespace TF_discreta
                         }
                         EnumText.Visibility = ViewStates.Visible;
                         EnumText.Text = String.Empty;
-
+                        //container.Visibility = ViewStates.Visible;
                         for (int i = 0; i < ma.getHab(); i++)
                         {
                             int aux4 = i + 1;
-                            EnumText.Text = EnumText.Text + "Los quimicos en el cuarto #" + aux4 + ": \n";
+                            EnumText.SetTextColor(Android.Graphics.Color.Red);
+                            EnumText.Text = EnumText.Text + "Los químicos en el cuarto #" + aux4 + ": \n";
+                            //EnumText.SetTextColor(Android.Graphics.Color.White);
                             for (int j = 0; j < numcant; j++)
                             {
                                 if (arr[j] == i)
                                 {
+                                    //View addView2 = LayoutInflater.Inflate(Resource.Layout.buttons, null);
+                                    //TextView nombreE = addView2.FindViewById<TextView>(Resource.Id.nombre2);
+                                    //nombreE.Text = myTextViews[j];
+                                    //container.AddView(addView2);
+                                    //EnumText.Text = EnumText.Text + "\n";
                                     EnumText.Text = EnumText.Text + myTextViews[j] + "\n";
                                 }
                             }
